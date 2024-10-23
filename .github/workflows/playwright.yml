@@ -21,6 +21,9 @@ jobs:
                npm ci 
                echo "Run Playwright Test"
                npm run test:ci
+        - name: Verify Test Report Generation
+          run: 
+
         - name: Archive Test Reports
           uses: actions/upload-artifact@v3
           with:
@@ -28,4 +31,6 @@ jobs:
             path: |
               test-results/html-report/index.html  # Path to HTML report
               test-results/report.json      # Path to JSON report
+            if-no-files-found: warn
+            include-hidden-files: false
         - run: ls -R my-artifact
