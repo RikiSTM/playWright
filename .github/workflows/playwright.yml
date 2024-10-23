@@ -26,6 +26,6 @@ jobs:
           with:
             name: test-reports
             path: |
-              test-results/html-report/**  # Path to HTML report
+              test-results/html-report/index.html  # Path to HTML report
               test-results/report.json      # Path to JSON report
         - run: ls -R my-artifact
