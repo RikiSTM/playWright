@@ -25,12 +25,11 @@ jobs:
           run: ls -R test-reports
 
         - name: Archive Test Reports
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v4
           with:
             name: test-reports
             path: |
-              test-reports/html-report/index.html  # Path to HTML report
-              test-reports/report.json      # Path to JSON report
+              test-reports/html-report
             if-no-files-found: warn
             include-hidden-files: false
-        - run: ls -R my-artifact
+       
