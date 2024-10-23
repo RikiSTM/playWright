@@ -22,7 +22,7 @@ jobs:
                echo "Run Playwright Test"
                npm run test:ci
         - name: Verify Test Report Generation
-          run: 
+          run: ls -R test-results
 
         - name: Archive Test Reports
           uses: actions/upload-artifact@v3
