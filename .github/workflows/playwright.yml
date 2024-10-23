@@ -21,3 +21,10 @@ jobs:
                npm ci 
                echo "Run Playwright Test"
                npm run test:ci
+        - name: Archive Test Reports
+          uses: actions/upload-artifact@v2
+          with:
+            name: test-reports
+            path: |
+              test-results/html-report/**  # Path to HTML report
+              test-results/report.json      # Path to JSON report
