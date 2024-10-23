@@ -29,8 +29,8 @@ jobs:
           with:
             name: test-reports
             path: |
-              test-results/html-report/index.html  # Path to HTML report
-              test-results/report.json      # Path to JSON report
+              test-reports/html-report/index.html  # Path to HTML report
+              test-reports/report.json      # Path to JSON report
             if-no-files-found: warn
             include-hidden-files: false
         - run: ls -R my-artifact
